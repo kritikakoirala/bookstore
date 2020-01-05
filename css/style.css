@@ -131,6 +131,28 @@ h2, h3, h4, h5, h6{
   color:rgba(0,0,0,0.5);
 }
 
+.logout{
+  margin-right:15rem;
+}
+.logout .username{
+  float:left;
+  font-weight:bold;
+}
+
+.logout .usertype{
+  color:#888;
+  font-size:16px;
+  font-style:italic;
+}
+
+.logout .logout-link{
+  color:#999;
+  font-size:16px;
+}
+.logout .logout-link:hover{
+  color:#000;
+}
+
 .main-header .header-bottom{
   margin-top:2rem;
 }
@@ -158,132 +180,82 @@ h2, h3, h4, h5, h6{
   color:#F6980A !important;
 }
 
-/* #header{
-  width:100%;
-  height:250px;
-  background:#fff;
-}
-
-.header-bottom .navbar-toggler .navbar-toggler-icon{ 
-  background-color: #000 !important;  
-}
-
-
-#header .header-top{
-  width:100%;
-  height:160px;
-  padding-top:50px;
-}
-
-.escape-logo{
-  text-align: center;
-}
-
-
-.escape-logo a{
-  color:#ccc;
-  text-decoration: none;
-}
-
-.escape-logo img{
-  max-width:100%;
-  height:auto;
-  vertical-align: middle;
-}
-
-.header-top .form-search{
-  position: relative;
-}
-
-.header-top .book-search .fas{
-  display: inline-block;
-  font-size: 14px;
-  color:#ccc;
-}
-
-.header-top .book-search{
-  width:70%;
-  border:2px solid rgb(143, 142, 142);
-  border-radius: 40px;
-  padding:6px 10px;
-  position: relative;
-}
-
-.book-search input, select{
-  border:none;
-}
-
-.book-search #product_dropdown{
-  float: right;
-  color:rgb(143, 142, 142);
-}
-
-.book-search input::placeholder{
-  font-style: italic;
-  font-size: 14px;
-  color:rgb(143, 142, 142);
-  padding-left:20px;
-}
-
-.login{
-  float: right;
-  margin-right:7rem;
-}
-
-.login .nav .nav-link{
-  color:rgb(143, 142, 142) !important;
-  text-transform: uppercase;
-  font-size: 14px;
-}
-
-#header .header-bottom{
-  width:100%;
-  height:75px;
-}
-
-
-.header-bottom .navbar .nav-link{
-  color:#000;
-  font-size: 16px;
-} */
-
 
 /* login and register login */
 
-.modal .modal-dialog{
-  box-shadow: 2px 14px 10px rgba(0,0,0,0.4);
-  background:#fff;
+.register_heading, .login_heading{
+  margin-top:2rem;
+  text-align:center;
+  border-top:1px solid #ccc;
+  padding-top:3rem;
 }
 
-.modal .modal-content{
-  border-radius: 0 !important;
-}
 
-.modal-body{
-  padding-top:0 !important;
-}
+#registerForm, #loginForm{
+  width:100%;
+  margin:2rem 4rem;
+  padding:3rem 5rem 7rem 5rem;
+  border:2px solid #ccc;
+  border-radius:10px;
 
-.modal-body .btn{
-  margin-top:1rem !important;
 }
-
-#registerModal .modal-body .form-group{
+ .form-group{
   margin-bottom:0 !important;
 }
 
-.modal-body .form-group input{
+
+.form-group input{
   background-color: #fafafa;
   border: 2px solid #ebebeb;
 }
 
- .modal-body, .modal-footer{
-  border:0 !important;
+ .form-group #selectAge{
+  width:100%;
+  padding:.375rem .75rem;
+ 
+  background-color: #fafafa !important;
+  border: 2px solid #ebebeb !important;
+  color: #495057;
+}
+
+.form-check{
+  margin-top:.5rem;
+}
+#registerForm .footer, #loginForm .footer{
+  padding-top:1rem;
+  float:right;
+}
+
+ #registerForm .footer a, #loginForm .footer a{
+   color:#fff;
+ }
+
+ #loginForm .btn-submit, #registerForm .btn-submit{
+   margin-top:2rem !important;
+ }
+
+ .error {
+	width: 92%; 
+	margin: 0px auto; 
+	padding: 10px; 
+	border: 1px solid #a94442; 
+	color: #a94442; 
+	background: #f2dede; 
+	border-radius: 5px; 
+	text-align: left;
+}
+
+.success {
+	color: #3c763d; 
+	background: #dff0d8; 
+	border: 1px solid #3c763d;
+	margin-bottom: 20px;
 }
 
 
 /* Index style */
 
-.jombotron{
+.home-page{
   width:100%;
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url('../images/jumbotron.jpg');
   background-color: #111;
@@ -292,11 +264,11 @@ h2, h3, h4, h5, h6{
   position: relative;
 }
 
-.jombotron h1{
+.home-page h1{
   color:#fff;
   position:absolute;
   top:40%;
-  left:35%;
+  left:36%;
   text-align: center;
   font-family: Lato, sans-serif;
   font-weight: 700;
@@ -388,13 +360,14 @@ h2, h3, h4, h5, h6{
   font-family: Lato, sans-serif;
 }
 
-.card .card-body .card-price{
+.card .card-body .card-price, .card .card-body .card-date{
   font-size: 18px;
   color:#F6980A;
   font-style: italic;
   padding-top:1rem;
   font-family: Merriweather, serif;
 }
+
 
 .hover-contents{
   position: absolute;
@@ -435,7 +408,7 @@ h2, h3, h4, h5, h6{
   height:40px;
   border:1px solid #fff;
   border-radius: 50%;
-  
+  text-align:center;
 } 
 
 .hover-btns .view-btn{
@@ -535,6 +508,7 @@ h2, h3, h4, h5, h6{
 .sort-products{
   margin-top:4rem;
   float: right;
+  margin-bottom:2rem;
 }
 
 .sort-products #sort_dropdown {
@@ -558,14 +532,9 @@ h2, h3, h4, h5, h6{
   border-radius: 6px;
 }
 
-.price-list .range-slider{
-  padding-top:1rem;
-}
-
-
 
 .author-list{
-  padding-top:4rem;
+  padding-top:8rem;
 }
 
 .categories, .authors{
@@ -616,36 +585,58 @@ h2, h3, h4, h5, h6{
   font-size: 14px;
 }
 
-.page-item.active .page-link{
+.page-item .page-link .active{
   background-color: #E26411 !important;
   color:#fff !important;
 }
 
 
+
 /* filter by price */
 
-.price-list{
-  width:100%;
-  height:auto;
+.form-price-range-filter {
+	text-align: center;
 }
 
-.price-list .range-slider{
-  width:90%;
-  height:20px;
-  margin-left:1.5rem;
+.price-list #slider-range{
+  width: 75%;
+	float: left;
+  margin: .2rem 3rem;
 }
 
-.range-slider .slider-price{
+.filter-submit {
+	margin-top: 20px;
+	padding: 5px 20px;
+	background: #FFF;
+	border: #aaa 1px solid;
+	border-radius: 4px;
+  width:200px;
+}
+
+.filter-submit:hover{
+  background-color: #E26411;
+  color:#fff;
+  transition: .4s ease-in-out;
+}
+
+.price-list .slider-price{
   margin-top:2rem;
 }
 
-.range-slider .slider-price #amount{
+.price-list .slider-price #amount{
   border:none;
   background:transparent;
   font-weight: bold;
   word-spacing:15px;
   color:rgba(0,0,0,0.7);
 }
+#slider-range .ui-slider-handle{
+  border:1px solid #E26411;
+  background:#fff;
+  border-radius: 50%;
+}
+
+
 
 #slider-range .ui-widget-header{
   background:#E26411;
@@ -656,6 +647,9 @@ h2, h3, h4, h5, h6{
   background:#fff;
   border-radius: 50%;
 }
+
+
+
 
 /* Single style */
 
@@ -909,7 +903,6 @@ h2, h3, h4, h5, h6{
 .more-books .more-books-img img{
   width:100%;
   height:100%; 
-
   border-radius: 3px 10px 10px 3px;
 }
 
@@ -1247,9 +1240,13 @@ h2, h3, h4, h5, h6{
 
 /* responsive viewports */
 
-
-
 @media (max-width:992px){
+  /* header style */
+  .header-top-middle .form-search
+  {
+    width:300px;
+  }
+  /* index style */
   .card-deck .card{
     width:200px;
     height:auto;   
@@ -1272,10 +1269,48 @@ h2, h3, h4, h5, h6{
     margin-right:-30px;
   }
 
+  /* single */
+  .author-description{
+    padding-bottom:6rem;
+  }
+
+  .more-books{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    height:100%;
+    padding-left:2rem;  
+  }
+  
+  .more-books-img{
+    width:200px;
+    height:200px;    
+  }
+
+  #book-description .left-detail h5{
+    padding:0 0 3rem 0;
+  }
+  #book-description .left-detail h5::after{
+    left:10px;
+  }
+
+  /* category style */
+
+  .categories, .authors{
+    margin:0;
+  }
+  
+  .book-items .card{
+    width:200px;
+    height:auto;   
+  }
+
+
 }
 
 @media (max-width:768px){
 
+  /* header style */
   #header .main-header{
     display: flex;
     flex-direction: row;
@@ -1330,6 +1365,18 @@ h2, h3, h4, h5, h6{
     color:#000;
     padding-top:1rem;
   }
+
+   /* index style */
+   .card-deck .card{
+    width:230px;
+    height:auto;   
+  }
+
+  .home-page h1{
+    left:30%;
+  }
+
+  /* footer style */
   .footer-top .address, .footer-top .social-media{
     margin-bottom:4rem;
   }
@@ -1347,15 +1394,45 @@ h2, h3, h4, h5, h6{
     margin-right:13rem;
   }
 
+ /* single style */
+ #book-description .left-detail h5{
+  padding:0 0 3rem 0.7rem;
+}
+
+ #author-section .author-description .author-img{
+  margin-left:1rem;
+}
+ 
+
+@media (max-width: 576px){
+  .home-page h1{
+    left:20%;
+  }
+
   .card-deck .card{
-    width:230px;
+    width:180px;
     height:auto;   
   }
 
- 
+  .footer-top .categories{
+    margin-right:8rem;
+  }
 
+  .more-books-img{
+    width:280px;
+    height:150px;    
+  }
+
+  .book-items{
+    margin-right:10px;
+  }
+   .book-items .card{
+    width:150px;
+    height:auto;   
+  } 
+
+  .card .card-img-top{
+    height:250px;
+  }
 }
 
-@media (max-width: 576px){
-
-}

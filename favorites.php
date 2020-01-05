@@ -1,84 +1,15 @@
-<?php?>
+<?php
+include 'includes/db.php';
+include 'includes/header.php'; 
+include 'includes/navigation.php'; 
+include 'register_process.php'; 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Favprites page of bookstore</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-</head>
-<body>
-	<header id="header">
-		<div class="container-fluid">	
-			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12">
-
-					<div class="main-header">
-
-						<div class="header-top">
-							<div class="escape-logo">
-								<a href="index.php"><img src="images/bookstore_logo.png" class = "img-responsive" alt="Escape Bookstore Logo"></a>
-							</div><!--.logo-->
-						
-							<div class="header-top-middle">							
-								<div class="form-search">			
-									<!-- search box -->
-									<form action="" class="book-search">
-										<i class="fas fa-search"></i>
-										<input type="text" placeholder = "Search books by..." name = "search-books">
-										<select name="product_cat" id="product_dropdown">All Products
-											<option value="art">Art</option>
-											<option value="fantasy">Fantasy</option>
-											<option value="Mystery">Mystery</option>
-										</select>
-									</form>
-								</div>	<!--.form-search-->
-							
-								<div class="login">
-									<ul class="nav">
-										<li class="nav-item">
-											<a href="#" class="nav-link fas fa-user"> Login</a>			
-										</li><!--.nav-item-->
-
-										<li class="nav-item">
-											<a href="#" class="nav-link fas fa-user-plus"> Register</a>
-										</li><!--.nav-item-->
-									</ul><!--.nav-->
-								</div><!--login-->									
-									
-							</div><!--header-middle-->
-						
-						</div><!--header-top-->
-
-						<div class="header-bottom">
-							<nav class="navbar navbar-expand-md bg-faded navbar-light">
-								<button class="navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#collapsibleNavbar">
-									<span class="navbar-toggler-icon"></span>
-								</button>
-
-								<div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
-									<ul class="navbar-nav">
-										<li class="nav-item"><a href="" class="nav-link">Home</a></li>
-										<li class="nav-item"><a href="" class="nav-link">Authors</a></li>
-										<li class="nav-item"><a href="" class="nav-link">Categories</a></li>
-										<li class="nav-item"><a href="" class="nav-link" data-hidden = "true">Favorites</a></li>
-										<div class="hidden-login">
-										<li class="nav-item"><a href="" class="nav-link" data-hidden = "true">Login</a></li>
-										</div><!--hidden-login-->
-									</ul><!--navbar--nav-->
-								</div><!--collapse-->
-							</nav><!--navbar-->
-						</div><!--header-bottom-->
-
-					</div><!--main-header-->
-				</div><!--col-->
-			</div><!--row-->
-		</div><!--.container-->
-	</header><!--#header-->
+if (!isLoggedIn()) {
+	$_SESSION['msg'] = "You must log in first";
+	header('location: register.php');
+}
+?>
+	  
 	
 	<section id="favorites">
 		<h2>Your saved favorites</h2>

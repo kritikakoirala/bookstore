@@ -1,18 +1,37 @@
-<?php ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Escape Books Store</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
- 
-</head>
- <body>
+<?php 
+session_start();
+include 'includes/db.php';
+include 'includes/header.php'; 
+include 'includes/navigation.php'; 
+include 'login_process.php'; 
+?>
+	  
+    <div class = "container"> 
+	<div class = "row">
+	<div class = "col-lg-12">
+        <h1 class = "login_heading">Login Form</h1>
+       
+        <form action="login.php" method = "post" id = "loginForm">
+       	    <?php echo display_error(); ?>
+            <div class="form-group">
+                <label for="user"></label>
+                <input type="text" class="form-control" placeholder="Username" id="user" name = "username" value = "<?php if(isset($_POST['username'])) echo $username; ?>">
+            </div>
 
-</body>
+            <div class="form-group">
+                <label for="pwd"></label>
+                <input type="password" class="form-control" placeholder="Password" id="pwd" name = "password">
+            </div>
+                
+			<button type="submit" class="btn btn-primary btn-block btn-submit" name = "loginBtn">Login</button>        
+
+			<div class="form-group footer">
+	
+
+					<p>Not a member yet? <button type = "button" class = "btn btn-primary"  ><a href = "register.php">Register</a></button></p>
+					
+			</div>
+        </form><!--form-->
+    </div>
+	</div>
+	</div>

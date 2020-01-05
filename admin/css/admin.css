@@ -1,0 +1,112 @@
+body {
+    margin-top: 100px;
+
+}
+#page-wrapper{
+    width:100%;
+    background-color:#fff !important;
+}
+h1{
+  margin-bottom:2rem !important; 
+  text-align:center;
+  margin-top:2rem !important; 
+}
+
+/* Top Navigation */
+
+.top-nav {
+    margin-right:3rem;
+}
+
+.top-nav .nav-item{
+    padding-right:10px;
+}
+.dropdown-menu{ 
+   max-width:10px;
+   margin-right:10rem !important;
+    left:-100px !important;
+}
+
+
+
+label{
+    font-weight:bold !important;
+    display:block !important;
+}
+
+.index{
+    background-color:#999;
+}
+.home {
+    text-align:center;
+    margin-top:15%;
+    
+}
+
+.admin_heading{
+  text-align:center;
+  border-top:1px solid #ccc;
+  padding-top:3rem;
+}
+
+
+#createAdminForm{
+  width:100%;
+  margin:2rem 4rem;
+  padding:3rem 5rem 7rem 5rem;
+  border:2px solid #ccc;
+  border-radius:10px;
+
+}
+ .form-group{
+  margin-bottom:0 !important;
+}
+
+
+.form-group input{
+  background-color: #fafafa;
+  border: 2px solid #ebebeb;
+}
+
+ .form-group #selectAge{
+  width:100%;
+  padding:.375rem .75rem;
+ 
+  background-color: #fafafa !important;
+  border: 2px solid #ebebeb !important;
+  color: #495057;
+}
+
+.form-check{
+  margin-top:.5rem;
+}
+#createAdminForm .footer{
+  padding-top:1rem;
+  float:right;
+}
+
+#createAdminForm .footer a{
+   color:#fff;
+ }
+
+ #createAdminForm .btn-submit{
+   margin-top:2rem !important;
+ }
+
+ .error {
+	width: 92%; 
+	margin: 0px auto; 
+	padding: 10px; 
+	border: 1px solid #a94442; 
+	color: #a94442; 
+	background: #f2dede; 
+	border-radius: 5px; 
+	text-align: left;
+}
+
+.success {
+	color: #3c763d; 
+	background: #dff0d8; 
+	border: 1px solid #3c763d;
+	margin-bottom: 20px;
+}
